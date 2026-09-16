@@ -1,132 +1,103 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head <meta
+    name="description"
+    content="Bhaskar's personal portfolio showcasing web development projects and skills."
+>>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Bhaskar's personal portfolio showcasing frontend development learning and projects.">
+    <meta
+      name="description"
+      content="Bhaskar's personal portfolio showcasing frontend development learning and projects."
+    />
 
     <title>Bhaskar | Frontend Developer</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
+    <a href="#main-content" class="skip-link"> Skip to main content </a>
     <!-- Header -->
     <header>
-        <h1>Bhaskar Yankanchi</h1>
+      <h1>Bhaskar Yankanchi</h1>
 
-        <!-- Navigation -->
-        <nav aria-label="Main navigation">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <!-- Navigation -->
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
+        <p>
+          Hello! I am Bhaskar Yankanchi, a frontend development intern learning
+          modern web technologies.
+        </p>
+      </section>
 
-            <p>
-                Hello! I am Bhaskar Yankanchi,
-                a frontend development intern
-                learning modern web technologies.
-            </p>
-        </section>
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>My Skills</h2>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>My Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </section>
 
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-        </section>
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>My Projects</h2>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>My Projects</h2>
+        <article>
+          <h3>LaunchPad</h3>
 
-            <article>
-                <h3>LaunchPad</h3>
+          <p>A startup pitch portal built using Bootstrap.</p>
+        </article>
 
-                <p>
-                    A startup pitch portal
-                    built using Bootstrap.
-                </p>
-            </article>
+        <article>
+          <h3>FarmGenius</h3>
 
-            <article>
-                <h3>FarmGenius</h3>
+          <p>An agriculture-focused web application project.</p>
+        </article>
+      </section>
 
-                <p>
-                    An agriculture-focused
-                    web application project.
-                </p>
-            </article>
-        </section>
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Me</h2>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
+        <form>
+          <fieldset>
+            <legend>Contact Me</legend>
 
-            <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-                <div>
-                    <label for="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                    >
-                </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-                <div>
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                    >
-                </div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-                <div>
-                    <label for="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        required
-                    ></textarea>
-                </div>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-        </section>
-
+            <button type="submit">Send Message</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Bhaskar Yankanchi</p>
+      <p>&copy; 2026 Bhaskar Yankanchi</p>
     </footer>
-
-</body>
+  </body>
 </html>
