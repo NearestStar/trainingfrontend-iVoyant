@@ -1,0 +1,8 @@
+@keyframes moveAndRotate{
+    from{
+        transform: translateX(0) rotate(0deg);
+    }
+    to{
+        transform: translateX(200px) rotate(360deg)
+    }
+}
