@@ -1,8 +1,8 @@
-@keyframes moveAndRotate{
-    from{
-        transform: translateX(0) rotate(0deg);
-    }
-    to{
-        transform: translateX(200px) rotate(360deg)
-    }
+.card, .profile-card {
+  padding: 20px;
+  border-radius: 10px;
 }
+
+.profile-card {
+  background-color: white;
+}/*# sourceMappingURL=test.css.map */
