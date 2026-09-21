@@ -1,44 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Animated To-Do List</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="script.js"></script>
+    <title>CSS Animation Practice</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 flex items-center justify-center p-4">
+    <div class="card">
+        <img
+            src="https://via.placeholder.com/120"
+            alt="Profile picture"
+        >
 
-    <div class="bg-white w-full max-w-md p-6 rounded-2xl shadow-xl">
+        <h1>Bhaskar B Y</h1>
 
-        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
-            My To-Do List
-        </h1>
+        <p>Frontend Developer</p>
 
-        <form id="todoForm" class="flex gap-2 mb-6">
-
-            <input
-                type="text"
-                id="taskInput"
-                placeholder="Enter a task..."
-                class="flex-1 min-w-0 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500 transition"
-            >
-
-            <button
-                type="submit"
-                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 active:scale-95"
-            >
-                Add
-            </button>
-
-        </form>
-
-        <ul id="taskList" class="space-y-3"></ul>
-
+        <button>Contact Me</button>
     </div>
 
 </body>
