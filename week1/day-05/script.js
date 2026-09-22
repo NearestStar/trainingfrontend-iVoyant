@@ -12,6 +12,7 @@ weatherForm.addEventListener("submit", (e) => {
     weatherResult.classList.remove("error");
     weatherResult.textContent = "Loading weather...";
     getCoordinates(city);
+    cityInput.value = "";
 });
 
 async function getCoordinates(city) {
