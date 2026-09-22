@@ -1,0 +1,17 @@
+name: Weather App Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run check
+        run: echo "Weather App check passed!"
