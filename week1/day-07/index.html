@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="TaskFlow - A modern productivity and task management application."
+    >
+
+    <title>TaskFlow - Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h1>TaskFlow</h1>
+
+                    <p>
+                        Organize. Focus. Accomplish.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button
+                class="add-task-btn"
+                id="openTaskModal"
+                type="button"
+            >
+                <span>+</span>
+                Add Task
+            </button>
+
+        </header>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="dashboard">
+
+            <!-- ================= WELCOME ================= -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <p class="greeting">
+                        Welcome back 👋
+                    </p>
+
+                    <h2>
+                        Let's make today
+                        <span>productive.</span>
+                    </h2>
+
+                    <p class="welcome-text">
+                        Stay focused, complete your tasks
+                        and keep your streak alive.
+                    </p>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+
+                        <span>
+                            Today's Progress
+                        </span>
+
+                        <strong id="progressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            id="progressFill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        ⭐
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Total Points
+                        </p>
+
+                        <h3 id="pointsValue">
+                            0
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        🔥
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Current Streak
+                        </p>
+
+                        <h3>
+
+                            <span id="streakValue">
+                                0
+                            </span>
+
+                            <small>
+                                days
+                            </small>
+
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Completed
+                        </p>
+
+                        <h3 id="completedValue">
+                            0
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        🏆
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Best Streak
+                        </p>
+
+                        <h3>
+
+                            <span id="bestStreakValue">
+                                0
+                            </span>
+
+                            <small>
+                                days
+                            </small>
+
+                        </h3>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ================= ACTIVE TASKS ================= -->
+
+            <section class="tasks-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            YOUR WORK
+                        </p>
+
+                        <h2>
+
+                            Active Tasks
+
+                            <span id="taskCount">
+                                0
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="tasks-container"
+                    id="taskList"
+                ></div>
+
+            </section>
+
+
+            <!-- ================= HISTORY ================= -->
+
+            <section class="history-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            YOUR JOURNEY
+                        </p>
+
+                        <h2>
+
+                            Task History
+
+                            <span id="historyCount">
+                                0
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="clear-history-btn"
+                        id="clearHistory"
+                        type="button"
+                    >
+                        Clear History
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="history-container"
+                    id="historyList"
+                ></div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="footer">
+
+            <p>
+                Built with ❤️ using HTML, CSS & TypeScript
+            </p>
+
+            <p>
+                TaskFlow © 2026
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ================= ADD TASK MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="taskModal"
+    >
+
+        <div class="task-modal">
+
+            <button
+                class="close-modal"
+                id="closeTaskModal"
+                type="button"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    +
+                </div>
+
+                <div>
+
+                    <h2>
+                        Create New Task
+                    </h2>
+
+                    <p>
+                        Add something you want to accomplish.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-group">
+
+                    <label for="taskInput">
+                        Task Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="e.g. Complete TypeScript project"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="dueDate">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dueDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option
+                                value="medium"
+                                selected
+                            >
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="description">
+
+                        Description
+
+                        <span>
+                            Optional
+                        </span>
+
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="3"
+                        placeholder="Add some details..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelTask"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="create-btn"
+                    >
+                        Create Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <div>
+
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+            <p id="toastMessage">
+                Task created successfully.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
