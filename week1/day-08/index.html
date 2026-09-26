@@ -1,45 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship Registration Form</title>
+
+    <meta
+        name="description"
+        content="TypeSafe Task Board - TypeScript type-safety practice project"
+    >
+
+    <title>TypeSafe Task Board</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="script.js"></script>
 </head>
+
 <body>
-    <main>
-        <form>
-            <label for="full-name">Enter Full Name:</label>
-            <input type="text" id="name" name="full-name" placeholder="eg. Austin">
 
-            <label for="email">Enter email:</label>
-            <input type="email" id="email" name="email" placeholder="eg. abc@gmail.com">
+    <div class="app">
 
-            <label for="tel">Enter number:</label>
-            <input type="tel" id="tel" name="tel" placeholder="eg. 1234567890">
+        <header class="header">
 
-            <label for="age">Enter age:</label>
-            <input type="number" id="age" name="age" min="18" max="30" placeholder="eg. 22">
+            <div class="brand">
+                <div class="brand-icon">✓</div>
 
-            <label for="dob">Enter date of birth</label>
-            <input type="date" id="dob" name="dob" placeholder="eg. 01-01-2004">
+                <div>
+                    <h1>TypeSafe</h1>
+                    <p>Task Board</p>
+                </div>
+            </div>
 
-            <label for="password">Enter your password</label>
-            <input type="password" id="password" name="password" placeholder="minimum 8 characters">
+            <div class="header-info">
+                <span>TypeScript</span>
+                <span>Type Safety</span>
+            </div>
 
-            <fieldset>
-                <legend>Gender: </legend>
+        </header>
 
-                <label for="male">Male</label>
-                <input type="radio" id="male" name="gender">
 
-                <label for="female">Female</label>
-                <input type="radio" id="female" name="gender">
+        <main class="main">
 
-                <label for="others">Others</label>
-                <input tyep="radio" id="others" name="others">
-                
-            </fieldset>
-        </form>
-    </main>
+            <section class="hero">
+
+                <div>
+                    <p class="eyebrow">DAY 08 • TYPESCRIPT</p>
+
+                    <h2>
+                        Build with
+                        <span>confidence.</span>
+                    </h2>
+
+                    <p class="hero-text">
+                        A small task board built to practice
+                        TypeScript type-safety concepts.
+                    </p>
+                </div>
+
+                <div class="type-badge">
+                    <span>TS</span>
+                    <p>Strict Mode</p>
+                </div>
+
+            </section>
+
+
+            <section class="stats">
+
+                <article class="stat-card">
+                    <span class="stat-icon">📋</span>
+
+                    <div>
+                        <p>Total Tasks</p>
+                        <h3 id="totalTasks">0</h3>
+                    </div>
+                </article>
+
+
+                <article class="stat-card">
+                    <span class="stat-icon">✅</span>
+
+                    <div>
+                        <p>Completed</p>
+                        <h3 id="completedTasks">0</h3>
+                    </div>
+                </article>
+
+
+                <article class="stat-card">
+                    <span class="stat-icon">🔥</span>
+
+                    <div>
+                        <p>High Priority</p>
+                        <h3 id="highPriorityTasks">0</h3>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <section class="task-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">YOUR TASKS</p>
+                        <h2>Task Board</h2>
+                    </div>
+
+                    <button
+                        id="addTaskButton"
+                        class="primary-button"
+                    >
+                        + Add Task
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="taskList"
+                    class="task-grid"
+                ></div>
+
+            </section>
+
+
+            <section class="type-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">TYPESCRIPT</p>
+                        <h2>Type-Safety Concepts</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="concept-grid">
+
+                    <article class="concept-card">
+                        <span>01</span>
+                        <h3>Union Types</h3>
+                        <p>
+                            Tasks use literal unions for
+                            priority and status.
+                        </p>
+                    </article>
+
+
+                    <article class="concept-card">
+                        <span>02</span>
+                        <h3>Utility Types</h3>
+                        <p>
+                            Pick, Omit, Partial and Readonly
+                            shape application data.
+                        </p>
+                    </article>
+
+
+                    <article class="concept-card">
+                        <span>03</span>
+                        <h3>Type Guards</h3>
+                        <p>
+                            typeof, in and instanceof safely
+                            narrow values.
+                        </p>
+                    </article>
+
+
+                    <article class="concept-card">
+                        <span>04</span>
+                        <h3>Record</h3>
+                        <p>
+                            Status and priority configurations
+                            remain type-safe.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer">
+
+            <p>
+                Built with HTML, CSS & TypeScript
+            </p>
+
+            <p>
+                Day 08 TypeScript Katas
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- MODAL -->
+
+    <div
+        id="taskModal"
+        class="modal-overlay hidden"
+    >
+
+        <div class="modal">
+
+            <button
+                id="closeModal"
+                class="close-button"
+                type="button"
+            >
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <p class="section-label">
+                    NEW TASK
+                </p>
+
+                <h2>Create Task</h2>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task title
+                    </label>
+
+                    <input
+                        id="taskTitle"
+                        type="text"
+                        placeholder="e.g. Learn TypeScript"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskDescription">
+                            Description
+                        </label>
+
+                        <input
+                            id="taskDescription"
+                            type="text"
+                            placeholder="Optional"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button full-width"
+                >
+                    Create Task
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="toast"
+        class="toast"
+    >
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <p id="toastMessage">
+            Task created successfully.
+        </p>
+    </div>
+
 </body>
+
 </html>
