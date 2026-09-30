@@ -146,3 +146,8 @@ test/
 node_modules/
 dist/
 .env
+
+day-09-webpack/
+react-learning/
+day-09-tooling/dist/
+day-09-tooling/node_modules/

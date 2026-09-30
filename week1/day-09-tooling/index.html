@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeBox</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>CodeBox</h1>
+        <p>Frontend Development Tools Playground</p>
+      </div>
+      <div class="actions">
+        <button id="run" class="primary">Run</button>
+        <button id="check">Check</button>
+        <button id="format">Format</button>
+        <button id="clear">Clear</button>
+      </div>
+    </header>
+ 
+    <main class="layout">
+      <section class="panel editor-panel">
+        <div class="panel-head">
+          <h2>Code</h2>
+          <label>
+            Language
+            <select id="language">
+              <option value="javascript">JavaScript (.js)</option>
+              <option value="typescript">TypeScript (.ts)</option>
+            </select>
+          </label>
+        </div>
+        <textarea id="editor" spellcheck="false" aria-label="Code editor"></textarea>
+      </section>
+ 
+      <div class="side">
+        <section class="panel">
+          <h2>Build Tools</h2>
+          <div class="tool-list">
+            <label><input type="checkbox" id="tool-prettier" checked /> Prettier</label>
+            <label><input type="checkbox" id="tool-eslint" checked /> ESLint</label>
+            <label><input type="checkbox" id="tool-typescript" checked /> TypeScript</label>
+          </div>
+        </section>
+ 
+        <section class="panel">
+          <h2>Tool Results</h2>
+          <div id="results" class="results">Click Check to analyze your code.</div>
+        </section>
+ 
+        <section class="panel">
+          <h2>Formatted Code</h2>
+          <p class="flow">Messy code → Prettier → formatted code</p>
+          <pre id="formatted" class="output">Click Format to see the result.</pre>
+        </section>
+ 
+        <section class="panel">
+          <h2>Preview</h2>
+          <p class="flow">Source code → sandboxed iframe (your code never runs on this page)</p>
+          <iframe id="preview" sandbox="allow-scripts" title="Preview"></iframe>
+        </section>
+ 
+        <section class="panel guide">
+          <h2>Which tool does what?</h2>
+          <dl>
+            <dt>Prettier</dt><dd>Formatting. Code → Prettier → formatted code.</dd>
+            <dt>ESLint</dt><dd>Code quality. Code → ESLint → warnings and errors.</dd>
+            <dt>TypeScript</dt><dd>Type checking. TS code → tsc → type errors.</dd>
+            <dt>Vite</dt><dd>Dev server and build. Source → Vite → dev server or build. It runs this page.</dd>
+            <dt>Webpack</dt><dd>Bundler. Entry → modules, loaders, plugins → bundle. See <code>day-09-webpack/</code>.</dd>
+          </dl>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
+ 
