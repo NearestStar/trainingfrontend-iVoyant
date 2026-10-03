@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="StockMate inventory and stock management dashboard"
+    />
+    <title>StockMate | Inventory Manager</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon">S</div>
+          <span>StockMate</span>
+        </div>
+
+        <nav>
+          <a href="#dashboard" class="nav-link active">▦ Dashboard</a>
+          <a href="#inventory" class="nav-link">▤ Inventory</a>
+          <a href="#activity" class="nav-link">↻ Activity</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <span class="status-dot"></span>
+          Inventory workspace
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">WORKSPACE / OVERVIEW</p>
+            <h1>Inventory dashboard</h1>
+          </div>
+
+          <button id="add-product-btn" class="primary-btn">
+            + Add product
+          </button>
+        </header>
+
+        <section id="dashboard" class="stats-grid">
+          <article class="stat-card">
+            <p>Total products</p>
+            <h2 id="total-products">0</h2>
+            <span>Products in your inventory</span>
+          </article>
+
+          <article class="stat-card">
+            <p>Inventory value</p>
+            <h2 id="inventory-value">₹0</h2>
+            <span>Current stock valuation</span>
+          </article>
+
+          <article class="stat-card">
+            <p>Low stock items</p>
+            <h2 id="low-stock-count">0</h2>
+            <span>Items to consider restocking</span>
+          </article>
+        </section>
+
+        <section id="inventory" class="content-card">
+          <div class="section-heading">
+            <div>
+              <h2>Product inventory</h2>
+              <p>Manage and track your stock</p>
+            </div>
+
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search products or SKU..."
+              aria-label="Search products"
+            />
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>SKU</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Stock status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody id="product-table-body"></tbody>
+            </table>
+          </div>
+
+          <p id="empty-message" class="empty-message">
+            No products found. Add your first product to get started.
+          </p>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="content-card" id="low-stock">
+            <div class="section-heading">
+              <div>
+                <h2>Low stock alerts</h2>
+                <p>Products at or below reorder level</p>
+              </div>
+            </div>
+
+            <div id="low-stock-list" class="alert-list"></div>
+          </article>
+
+          <article class="content-card" id="activity">
+            <div class="section-heading">
+              <div>
+                <h2>Recent activity</h2>
+                <p>Latest stock movements</p>
+              </div>
+            </div>
+
+            <div id="activity-list" class="activity-list"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="product-dialog">
+      <form id="product-form">
+        <div class="dialog-heading">
+          <div>
+            <h2>Add a product</h2>
+            <p>Enter the product details below</p>
+          </div>
+
+          <button
+            type="button"
+            id="close-dialog"
+            class="close-btn"
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+
+        <label for="product-name">Product name</label>
+        <input id="product-name" name="name" required />
+
+        <label for="product-sku">SKU</label>
+        <input id="product-sku" name="sku" required />
+
+        <label for="product-price">Price (₹)</label>
+        <input
+          id="product-price"
+          name="price"
+          type="number"
+          min="0.01"
+          step="0.01"
+          required
+        />
+
+        <label for="product-quantity">Initial quantity</label>
+        <input
+          id="product-quantity"
+          name="quantity"
+          type="number"
+          min="0"
+          step="1"
+          required
+        />
+
+        <label for="product-reorder">Reorder level</label>
+        <input
+          id="product-reorder"
+          name="reorderLevel"
+          type="number"
+          min="0"
+          step="1"
+          value="5"
+          required
+        />
+
+        <p id="form-error" class="form-error" role="alert"></p>
+
+        <button type="submit" class="primary-btn full-width">
+          Save product
+        </button>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
