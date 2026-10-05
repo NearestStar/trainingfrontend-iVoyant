@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="A typed TypeScript utility library with an interactive playground."
+    />
+
+    <title>ts-utils — TypeScript Utility Library</title>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="container header-inner">
+
+        <div class="logo">
+          <div class="logo-mark">TS</div>
+          ts-utils
+          <span>/ playground</span>
+        </div>
+
+        <div class="header-badge">
+          TypeScript Utility Library
+        </div>
+
+      </div>
+    </header>
+
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="container">
+
+          <div class="hero-label">
+            Built with TypeScript
+          </div>
+
+          <h1>
+            Small utilities.
+            <span class="gradient-text">
+              Strong types.
+            </span>
+          </h1>
+
+          <p>
+            A clean, reusable TypeScript utility library with
+            generic types, predictable APIs, unit tests and an
+            interactive playground.
+          </p>
+
+
+          <!-- CODE WINDOW -->
+
+          <div class="code-window">
+
+            <div class="code-header">
+
+              <div class="window-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="code-title">
+                example.ts
+              </div>
+
+            </div>
+
+            <pre><code><span class="keyword">import</span> {
+  <span class="function">capitalize</span>,
+  <span class="function">unique</span>,
+  <span class="function">sum</span>
+} <span class="keyword">from</span> <span class="string">"ts-utils"</span>;
+
+<span class="keyword">const</span> name = <span class="function">capitalize</span>(<span class="string">"bhaskar"</span>);
+
+<span class="keyword">const</span> numbers = <span class="function">unique</span>([1, 2, 2, 3, 3]);
+
+<span class="keyword">const</span> total = <span class="function">sum</span>(numbers);</code></pre>
+
+          </div>
+
+
+          <!-- STATS -->
+
+          <div class="stats">
+
+            <div class="stat">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Utilities</span>
+            </div>
+
+            <div class="stat">
+              <span class="stat-number">24</span>
+              <span class="stat-label">Passing Tests</span>
+            </div>
+
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">TypeScript</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PLAYGROUND -->
+
+      <section class="section">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <h2>Interactive Playground</h2>
+
+            <p>
+              Try the utilities directly in your browser.
+            </p>
+
+          </div>
+
+
+          <div class="playground">
+
+
+            <!-- CAPITALIZE -->
+
+            <div class="utility-card">
+
+              <div class="utility-top">
+
+                <div class="utility-name">
+                  capitalize
+                </div>
+
+                <div class="utility-type">
+                  string → string
+                </div>
+
+              </div>
+
+              <p class="utility-description">
+                Converts the first character of a string to
+                uppercase.
+              </p>
+
+              <div class="input-row">
+
+                <input
+                  id="capitalizeInput"
+                  type="text"
+                  placeholder="enter a string"
+                />
+
+                <button
+                  id="capitalizeButton"
+                  class="primary-button"
+                >
+                  Run
+                </button>
+
+              </div>
+
+              <div
+                id="capitalizeResult"
+                class="result"
+              >
+                Result will appear here
+              </div>
+
+            </div>
+
+
+            <!-- UNIQUE -->
+
+            <div class="utility-card">
+
+              <div class="utility-top">
+
+                <div class="utility-name">
+                  unique
+                </div>
+
+                <div class="utility-type">
+                  T[] → T[]
+                </div>
+
+              </div>
+
+              <p class="utility-description">
+                Removes duplicate values while preserving the
+                original order.
+              </p>
+
+              <div class="input-row">
+
+                <input
+                  id="uniqueInput"
+                  type="text"
+                  placeholder="apple, apple, banana"
+                />
+
+                <button
+                  id="uniqueButton"
+                  class="primary-button"
+                >
+                  Run
+                </button>
+
+              </div>
+
+              <div
+                id="uniqueResult"
+                class="result"
+              >
+                Result will appear here
+              </div>
+
+            </div>
+
+
+            <!-- SUM -->
+
+            <div class="utility-card">
+
+              <div class="utility-top">
+
+                <div class="utility-name">
+                  sum
+                </div>
+
+                <div class="utility-type">
+                  number[] → number
+                </div>
+
+              </div>
+
+              <p class="utility-description">
+                Calculates the total of all numbers in an array.
+              </p>
+
+              <div class="input-row">
+
+                <input
+                  id="sumInput"
+                  type="text"
+                  placeholder="10, 20, 30"
+                />
+
+                <button
+                  id="sumButton"
+                  class="primary-button"
+                >
+                  Run
+                </button>
+
+              </div>
+
+              <div
+                id="sumResult"
+                class="result"
+              >
+                Result will appear here
+              </div>
+
+            </div>
+
+
+            <!-- CLAMP -->
+
+            <div class="utility-card">
+
+              <div class="utility-top">
+
+                <div class="utility-name">
+                  clamp
+                </div>
+
+                <div class="utility-type">
+                  number → number
+                </div>
+
+              </div>
+
+              <p class="utility-description">
+                Restricts a number to a specified minimum and
+                maximum range.
+              </p>
+
+              <div class="input-group">
+
+                <input
+                  id="clampValue"
+                  type="number"
+                  placeholder="Value"
+                />
+
+                <input
+                  id="clampMin"
+                  type="number"
+                  placeholder="Min"
+                />
+
+                <input
+                  id="clampMax"
+                  type="number"
+                  placeholder="Max"
+                />
+
+              </div>
+
+              <br />
+
+              <button
+                id="clampButton"
+                class="primary-button"
+              >
+                Run Clamp
+              </button>
+
+              <div
+                id="clampResult"
+                class="result"
+              >
+                Result will appear here
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- LIBRARY -->
+
+      <section class="section">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <h2>Library API</h2>
+
+            <p>
+              The complete set of reusable utilities.
+            </p>
+
+          </div>
+
+
+          <div class="library-table">
+
+            <div class="library-row library-header">
+              <div>Function</div>
+              <div>Category</div>
+              <div>Description</div>
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                capitalize()
+              </div>
+
+              <div>String</div>
+
+              <div class="library-description">
+                Capitalizes the first character.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                unique()
+              </div>
+
+              <div>Array</div>
+
+              <div class="library-description">
+                Removes duplicate values.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                groupBy()
+              </div>
+
+              <div>Array</div>
+
+              <div class="library-description">
+                Groups objects by a specified property.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                filterBy()
+              </div>
+
+              <div>Array</div>
+
+              <div class="library-description">
+                Filters values using a predicate function.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                pick()
+              </div>
+
+              <div>Object</div>
+
+              <div class="library-description">
+                Creates an object containing selected properties.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                omit()
+              </div>
+
+              <div>Object</div>
+
+              <div class="library-description">
+                Creates an object without selected properties.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                sum()
+              </div>
+
+              <div>Number</div>
+
+              <div class="library-description">
+                Calculates the total of an array of numbers.
+              </div>
+
+            </div>
+
+
+            <div class="library-row">
+
+              <div class="library-function">
+                clamp()
+              </div>
+
+              <div>Number</div>
+
+              <div class="library-description">
+                Restricts a number to a minimum and maximum.
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+      <div class="container">
+
+        Built with TypeScript • Jest • Vite
+
+      </div>
+
+    </footer>
+
+
+    <script
+      type="module"
+      src="/src/main.ts"
+    ></script>
+
+  </body>
+</html>
