@@ -1,34 +1,19 @@
-type HeaderProps = {
-  taskCount: number;
-  remainingTasks: number;
-};
+import Button from "./Button";
 
-function Header({
-  taskCount,
-  remainingTasks,
-}: HeaderProps) {
+function Header() {
   return (
     <header className="header">
-      <div className="brand">
-        <div className="logo">✓</div>
+      <a href="#" className="logo">
+        NOVA<span>TECH</span>
+      </a>
 
-        <div>
-          <h1>TaskFlow</h1>
-          <p>Your personal productivity space</p>
-        </div>
-      </div>
+      <nav className="nav">
+        <a href="#products">Products</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+      </nav>
 
-      <div className="stats">
-        <div className="stat-card">
-          <span className="stat-label">Total</span>
-          <strong>{taskCount}</strong>
-        </div>
-
-        <div className="stat-card">
-          <span className="stat-label">Remaining</span>
-          <strong>{remainingTasks}</strong>
-        </div>
-      </div>
+      <Button text="Shop Now" />
     </header>
   );
 }
