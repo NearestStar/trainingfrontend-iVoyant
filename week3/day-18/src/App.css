@@ -1,0 +1,271 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: Inter, sans-serif;
+  background: #f6f5fb;
+  color: #24233a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 5% 0%, #ece7ff, transparent 40%),
+    radial-gradient(ellipse at 100% 20%, #e6edff, transparent 35%),
+    #f7f6fc;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 26px 0 32px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 38px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  color: white;
+  background: linear-gradient(140deg, #987fff, #6242d2);
+  box-shadow: 0 8px 22px #7255df35;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand-copy {
+  display: grid;
+  gap: 2px;
+}
+
+.brand-copy span:first-child {
+  font-size: 16px;
+}
+
+.brand-copy span:last-child {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+
+.secure-label {
+  margin-left: auto;
+  color: #4e9270;
+  font-size: 12px;
+}
+
+.secure-label .anticon {
+  margin-right: 5px;
+}
+
+.hero {
+  max-width: 650px;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.step-label {
+  color: #7055df;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.hero h1.ant-typography {
+  margin: 12px 0;
+  font-size: clamp(30px, 5vw, 42px);
+  letter-spacing: -1.7px;
+  line-height: 1.2;
+}
+
+.hero p.ant-typography {
+  max-width: 590px;
+  color: #77768c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.application-card.ant-card {
+  border: 1px solid #eeecf5;
+  border-radius: 20px;
+  box-shadow: 0 20px 70px #2920520b;
+}
+
+.application-card > .ant-card-body {
+  padding: 34px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.progress-header .ant-typography-secondary {
+  font-size: 12px;
+}
+
+.form-section-heading {
+  display: grid;
+  gap: 5px;
+  margin: 32px 0 22px;
+}
+
+.form-section-heading h4.ant-typography {
+  margin: 3px 0 0;
+}
+
+.form-section-heading .ant-typography-secondary {
+  font-size: 12px;
+}
+
+.application-card .ant-form-item {
+  margin-bottom: 20px;
+}
+
+.application-card .ant-form-item-label {
+  padding-bottom: 7px;
+}
+
+.application-card .ant-form-item-label > label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.application-card .ant-form-item-explain-error {
+  font-size: 11px;
+}
+
+.section-divider {
+  height: 1px;
+  margin: 10px 0 28px;
+  background: #eeecf4;
+}
+
+.skills-section {
+  margin-bottom: 8px;
+}
+
+.skills-section .section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.skills-section .section-heading h4.ant-typography {
+  margin: 0 0 4px;
+}
+
+.skills-section .section-heading .ant-typography-secondary {
+  font-size: 12px;
+}
+
+.skill-row {
+  display: flex;
+  gap: 8px;
+}
+
+.skill-form-item {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-form-item .ant-form-item-control-input {
+  min-height: 0;
+}
+
+.skill-form-item .ant-form-item-explain {
+  margin-bottom: 4px;
+}
+
+.array-error {
+  display: block;
+  margin: -8px 0 12px;
+  font-size: 12px;
+}
+
+.validation-alert {
+  margin-bottom: 16px;
+}
+
+.privacy-note {
+  display: block;
+  margin-top: 16px;
+  color: #9290a4;
+  text-align: center;
+  font-size: 11px;
+}
+
+.success-card {
+  text-align: center;
+}
+
+.success-card .success-icon {
+  display: block;
+  margin-bottom: 18px;
+  color: #22a06b;
+  font-size: 52px;
+}
+
+.success-card p.ant-typography {
+  max-width: 480px;
+  margin: 0 auto 24px;
+  color: #77768c;
+  line-height: 1.8;
+}
+
+.page-footer {
+  padding: 24px 0 0;
+  color: #9290a4;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    width: calc(100% - 20px);
+    padding-top: 18px;
+  }
+
+  .topbar {
+    margin-bottom: 26px;
+  }
+
+  .secure-label {
+    font-size: 10px;
+  }
+
+  .application-card > .ant-card-body {
+    padding: 20px 16px;
+  }
+
+  .hero h1.ant-typography {
+    font-size: 31px;
+  }
+}
