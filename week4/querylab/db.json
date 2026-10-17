@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Studio Wireless Headphones",
+      "description": "Rich, balanced sound with soft ear cushions for long listening sessions.",
+      "price": 89.99,
+      "category": "Audio",
+      "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=85",
+      "stock": 24,
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "title": "Everyday Smart Watch",
+      "description": "A clean, lightweight watch for daily movement and notifications.",
+      "price": 129.5,
+      "category": "Wearables",
+      "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=85",
+      "stock": 17,
+      "rating": 4.6
+    },
+    {
+      "id": 3,
+      "title": "Mechanical Keyboard",
+      "description": "Tactile keys and a compact layout for a more satisfying desk setup.",
+      "price": 74.0,
+      "category": "Accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1000&q=85",
+      "stock": 31,
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "title": "Everyday Backpack",
+      "description": "A durable everyday carry with room for your laptop and essentials.",
+      "price": 58.25,
+      "category": "Lifestyle",
+      "thumbnail": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85",
+      "stock": 12,
+      "rating": 4.5
+    },
+    {
+      "id": 5,
+      "title": "Desk Companion Chair",
+      "description": "A simple, comfortable silhouette designed for focused work.",
+      "price": 179.0,
+      "category": "Workspace",
+      "thumbnail": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1000&q=85",
+      "stock": 8,
+      "rating": 4.4
+    },
+    {
+      "id": 6,
+      "title": "Pocket Digital Camera",
+      "description": "A compact camera for saving everyday moments with character.",
+      "price": 219.99,
+      "category": "Photography",
+      "thumbnail": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=85",
+      "stock": 6,
+      "rating": 4.7
+    },
+    {
+      "id": 7,
+      "title": "Everyday Sneakers",
+      "description": "Cushioned everyday sneakers with a bold, easy-to-style finish.",
+      "price": 92.0,
+      "category": "Lifestyle",
+      "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85",
+      "stock": 19,
+      "rating": 4.6
+    },
+    {
+      "id": 8,
+      "title": "Minimal Phone Stand",
+      "description": "A compact desk stand that keeps video calls and viewing hands-free.",
+      "price": 22.5,
+      "category": "Accessories",
+      "thumbnail": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=85",
+      "stock": 42,
+      "rating": 4.3
+    }
+  ]
+}

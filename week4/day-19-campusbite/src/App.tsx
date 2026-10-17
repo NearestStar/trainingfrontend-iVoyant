@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import OrderConfirmation from "./components/OrderConfirmation";
 import { clearCart, type CartItem } from "./features/cart/cartSlice";
 import { foodItems, menuCategories, type MenuCategory } from "./features/menu/menuData";
-import "./App.css";
+
 
 const currency = new Intl.NumberFormat("en-IN", {
   style: "currency",
