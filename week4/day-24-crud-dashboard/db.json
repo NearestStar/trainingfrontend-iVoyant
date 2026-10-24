@@ -1,0 +1,95 @@
+
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma",
+      "email": "aarav@example.com",
+      "role": "Frontend Developer",
+      "department": "Engineering",
+      "location": "Bengaluru",
+      "salary": 65000,
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Priya Patel",
+      "email": "priya@example.com",
+      "role": "UI/UX Designer",
+      "department": "Design",
+      "location": "Pune",
+      "salary": 58000,
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Rohan Mehta",
+      "email": "rohan@example.com",
+      "role": "Backend Developer",
+      "department": "Engineering",
+      "location": "Hyderabad",
+      "salary": 72000,
+      "status": "Inactive"
+    },
+    {
+      "id": 4,
+      "name": "Sneha Rao",
+      "email": "sneha@example.com",
+      "role": "HR Executive",
+      "department": "Human Resources",
+      "location": "Bengaluru",
+      "salary": 48000,
+      "status": "Active"
+    },
+    {
+      "id": 5,
+      "name": "Kabir Singh",
+      "email": "kabir@example.com",
+      "role": "Product Manager",
+      "department": "Product",
+      "location": "Mumbai",
+      "salary": 85000,
+      "status": "Active"
+    },
+    {
+      "id": 6,
+      "name": "Ananya Desai",
+      "email": "ananya@example.com",
+      "role": "QA Engineer",
+      "department": "Engineering",
+      "location": "Pune",
+      "salary": 54000,
+      "status": "Inactive"
+    },
+    {
+      "id": 7,
+      "name": "Ishita Kulkarni",
+      "email": "ishita@example.com",
+      "role": "Product Designer",
+      "department": "Design",
+      "location": "Mumbai",
+      "salary": 61000,
+      "status": "Active"
+    },
+    {
+      "id": 8,
+      "name": "Vikram Rao",
+      "email": "vikram@example.com",
+      "role": "Financial Analyst",
+      "department": "Finance",
+      "location": "Bengaluru",
+      "salary": 68000,
+      "status": "Active"
+    },
+    {
+      "id": 9,
+      "name": "Meera Nair",
+      "email": "meera@example.com",
+      "role": "Marketing Executive",
+      "department": "Marketing",
+      "location": "Chennai",
+      "salary": 52000,
+      "status": "Inactive"
+    }
+  ]
+}
